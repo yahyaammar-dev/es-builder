@@ -1,0 +1,72 @@
+# Registeration
+User-->Web Dashboard : Register
+Web Dashboard-->Laravel Backend:User {id, name, email}
+Laravel Backend --> Web Dashboard: response
+Web Dashboard --> User : Logged In
+
+# Login
+User-->Web Dashboard : Login
+Web Dashboard-->Laravel Backend:User
+Laravel Backend --> Web Dashboard: response
+Web Dashboard --> User : Logged In
+
+# All Apps
+
+Web Dashboard -->Laravel Backend : All apps of user 
+Laravel Backend -->Web Dashboard: Returns all apps of user
+
+# Get details of single app 
+User -->Web Dashboard: Get details of single app
+Web Dashboard -->Laravel Backend : All apps of user 
+Laravel Backend -->Web Dashboard: Returns all apps of user
+
+# Add Entity
+User -->Web Dashboard: Add entity in an app
+Web Dashboard -->Laravel Backend : Add Entity 
+Laravel Backend -->Web Dashboard: Return Status
+
+# Edit Entity
+User -->Web Dashboard: Edit entity in an app
+Web Dashboard -->Laravel Backend : Edit Entity 
+Laravel Backend -->Web Dashboard: Return Status
+
+
+# Delete Entity
+User -->Web Dashboard: Delete entity in an app
+Web Dashboard -->Laravel Backend : Delete Entity 
+Laravel Backend -->Web Dashboard: Return Status
+
+
+# Login Mobile
+User --> Mobile App : Login
+Mobile App -->Laravel Backend:User
+Laravel Backend --> Mobile App: response
+Web Dashboard --> User : Logged In
+
+
+
+# Get Details of a single app
+User -->Mobile App: Get deatils of an app
+Mobile App -->Laravel Backend: Get details of an app
+Laravel Backend -->Mobile App: List of Entities and count of records in each
+
+
+# Get Details of single entity
+User -->Mobile App: Get deatils of Single Entity
+Mobile App -->Laravel Backend: Get detail of single entity
+Laravel Backend -->Mobile App: Return All fields of an enity
+
+# Create Record in an entity
+User -->Mobile App: Create Record of an Entity
+Mobile App -->Laravel Backend: Create Record in an entity
+Laravel Backend -->Mobile App: Created Successfully
+
+# Delete Record in an entity 
+User -->Mobile App: Delete Record in an entity
+Mobile App-->Laravel Backend: Delete Record in an entity
+Laravel Backend -->Mobile App: Deleted Successully
+
+# Edit Record in an entity 
+User -->Mobile App: Edit record of an app
+Mobile App -->Laravel Backend: Edit Record in an entity
+Laravel Backend -->Mobile App: Edited Successully
